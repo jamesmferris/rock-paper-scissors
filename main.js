@@ -1,62 +1,38 @@
-// function add7(number) {
-//   return number + 7;
-// }
-
-// console.log(add7(1));
-
-// function multiply(number1, number2) {
-//   return number1 * number2;
-// }
-
-// console.log(multiply(2, 3));
-
-// function capitalize(str) {
-//   return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
-// }
-
-// console.log(capitalize("SoPhIe"));
-
-// function lastLetter(str) {
-//   if (typeof str !== "string" || str.length === 0) {
-//     return "ERROR";
-//   } else {
-//     return str.slice(-1);
-//   }
-// }
-
-// console.log("The last letter is: ", lastLetter("James"));
-
-// let answer = parseInt(prompt("Please enter the number you would like to FizzBuzz up to: "));
-
-// console.log(answer);
-
-// for (let i = 1; i <= answer; i++) {
-//   if (i % 3 === 0 && i % 5 === 0) {
-//     console.log("FizzBuzz");
-//   } else if (i % 3 === 0) {
-//     console.log("Fizz");
-//   } else if (i % 5 === 0) {
-//     console.log("Buzz");
-//   } else {
-//     console.log(i);
-//   }
-// }
-
 let humanScore = 0;
 let computerScore = 0;
 
-let humanChoice = getHumanChoice();
-let computerChoice = getComputerChoice();
+for (let round = 1; round <= 5; round++) {
+  console.log(`Round ${round}`);
 
-playRound(humanChoice, computerChoice);
+  let humanChoice = getHumanChoice();
+  let computerChoice = getComputerChoice();
+
+  playRound(humanChoice, computerChoice);
+
+  console.log("Human score: " + humanScore);
+  console.log("Computer score: " + computerScore);
+}
+
+console.log("Final Scores:");
+console.log("Human score: " + humanScore);
+console.log("Computer score: " + computerScore);
+
+if (humanScore > computerScore) {
+  console.log("Human wins the game!");
+} else if (humanScore < computerScore) {
+  console.log("Computer wins the game!");
+} else {
+  console.log("The game is a tie!");
+}
 
 function getHumanChoice() {
   let humanChoice = prompt("Chose Rock, Paper, or Scissors");
-  if (humanChoice === "Rock") {
+  humanChoice = humanChoice.toLowerCase();
+  if (humanChoice === "rock") {
     console.log("Human chose: Rock");
-  } else if (humanChoice === "Paper") {
+  } else if (humanChoice === "paper") {
     console.log("Human chose: Paper");
-  } else if (humanChoice === "Scissors") {
+  } else if (humanChoice === "scissors") {
     console.log("Human chose: Scissors");
   } else {
     console.log("Incorrect input received");
@@ -77,32 +53,29 @@ function getComputerChoice() {
 }
 
 function playRound(humanChoice, computerChoice) {
-  if (humanChoice === "Rock" && computerChoice === 1) {
+  if (humanChoice === "rock" && computerChoice === 1) {
     console.log("Computer wins!");
     computerScore++;
-  } else if (humanChoice === "Rock" && computerChoice === 2) {
+  } else if (humanChoice === "rock" && computerChoice === 2) {
     console.log("Human wins!");
     humanScore++;
-  } else if (humanChoice === "Rock" && computerChoice === 0) {
+  } else if (humanChoice === "rock" && computerChoice === 0) {
     console.log("No winner. Round is a tie.");
-  } else if (humanChoice === "Paper" && computerChoice === 2) {
+  } else if (humanChoice === "paper" && computerChoice === 2) {
     console.log("Computer wins!");
     computerScore++;
-  } else if (humanChoice === "Paper" && computerChoice === 0) {
+  } else if (humanChoice === "paper" && computerChoice === 0) {
     console.log("Human wins!");
     humanScore++;
-  } else if (humanChoice === "Paper" && computerChoice === 1) {
+  } else if (humanChoice === "paper" && computerChoice === 1) {
     console.log("No winner. Round is a tie.");
-  } else if (humanChoice === "Scissors" && computerChoice === 1) {
+  } else if (humanChoice === "scissors" && computerChoice === 1) {
     console.log("Human wins!");
     humanScore++;
-  } else if (humanChoice === "Scissors" && computerChoice === 0) {
+  } else if (humanChoice === "scissors" && computerChoice === 0) {
     console.log("Computer wins!");
     computerScore++;
-  } else if (humanChoice === "Scissors" && computerChoice === 2) {
+  } else if (humanChoice === "scissors" && computerChoice === 2) {
     console.log("No winner. Round is a tie.");
   }
 }
-
-console.log("Human score: " + humanScore);
-console.log("Computer score: " + computerScore);
