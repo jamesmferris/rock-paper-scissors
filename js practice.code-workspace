@@ -1,0 +1,10 @@
+{
+  "folders": [
+	{
+		"path": "../js practice"
+	}
+],
+  "settings": {
+    "liveServer.settings.port": 5501
+  }
+}
