@@ -3,12 +3,34 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-
     <title>Rock Paper Scissor</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
 
   <body>
-    <h1>The Rock Paper Scissor Project</h1>
+    <h1>Rock Paper Scissors</h1>
+    <div id="scoreboard">
+      <div class="team" id="human-team">
+        <h2>Team Human</h2>
+        <div class="score" id="human-score">0</div>
+      </div>
+      <div class="team" id="computer-team">
+        <h2>Team Computer</h2>
+        <div class="score" id="computer-score">0</div>
+      </div>
+    </div>
+    <div id="selection-btns">
+      <button class="btns" id="rock-btn">Rock 🪨</button>
+      <button class="btns" id="paper-btn">Paper 📄</button>
+      <button class="btns" id="scissors-btn">Scissors ✂️</button>
+    </div>
+    <div id="round-El"></div>
+    <div id="game-messages">
+      <div id="game-message">Make your selection!</div>
+      <div id="final-game-message"></div>
+      <button id="restart-btn" class="btns" style="display: none">Restart Game</button>
+      <img id="winner-gif" src="" alt="Winner GIF" style="display: none" />
+    </div>
     <script src="main.js"></script>
   </body>
 </html>

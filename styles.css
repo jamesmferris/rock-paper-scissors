@@ -1,0 +1,64 @@
+html {
+  margin: 0;
+  margin-top: 50px;
+  text-align: center;
+}
+
+#scoreboard {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+}
+
+.team {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.score {
+  border: 1px solid black;
+  padding: 20px;
+  width: 60px;
+  font-size: 30px;
+}
+
+.winning-score {
+  background-color: lightgreen;
+  font-weight: bold;
+}
+
+#round-El {
+  font-size: 18px;
+}
+
+#selection-btns {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  margin: 30px;
+}
+
+.btns {
+  font-size: 16px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+#game-messages {
+  margin: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 18px;
+}
+
+#final-game-message {
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+#restart-btn {
+  display: none;
+  margin: 30px auto;
+}
